@@ -1,33 +1,12 @@
----
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
----
+## Getting Started with Spree API
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+Spree comes with a fully-featured API that allows it to operate in a fully headless mode (if you wish). This means that you can use Spree as a backend for your custom storefront, mobile app, or any other application that needs to interact with an e-commerce platform.
 
-## Welcome
+To use the APIs, install the `spree_api` gem with a version corresponding to your version of Spree. If you're using [spree\_starter](https://github.com/spree/spree\_starter) as a base for your project or you have the `spree` gem in your `Gemfile` the API will be included out of the box.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+Currently there are two types of APIs:
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+* [Storefront API](storefront/) - that's designed to allow customers to interact with the store via external applications (e.g. Vue Storefront or a dedicated mobile app).
+* [Platform API](platform/) - that provides management capabilities, allowing third party apps to perform actions otherwise available via the admin panel.
 
-## Authentication
-
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+Spree also offers a legacy v1 API, that's been extracted to `spree_api_v1` gem in Spree 4.5. It is not recommended to use it in new projects, but it's still available for existing ones.
